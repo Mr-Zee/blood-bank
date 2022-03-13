@@ -8,6 +8,118 @@
     flex: 1;
 }
 
+
+/* ------------- ****** HERO SECTION STARTS ******** -------------  */
+
+.heroImg {
+    display: block;
+    margin: auto;
+    height: 25rem;
+    width: 30rem;
+}
+
+.heroTitleBox {
+    display: flex;
+    align-items: center;
+}
+
+.heroTitle {
+    text-align: center;
+    width: 100%;
+    font-size: 75px;
+    font-weight: 650;
+}
+
+.heroTitle p {
+    margin: 0;
+}
+
+
+/* ------------- ****** HERO SECTION ENDS ******** -------------  */
+
+
+/* ------------- ****** MARQUEE SECTION STARTS ******** -------------  */
+
+.newsContent {
+    font-size: 26px;
+    padding: 5px;
+    background-color: rgb(245, 220, 220);
+}
+
+
+/* ------------- ****** MARQUEE SECTION ENDS ******** -------------  */
+
+
+/* ------------- ****** STOCKS SECTION STARTS ******** -------------  */
+
+.bloodStock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 50px 0;
+}
+
+.bloodStock p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.circle {
+    text-align: center;
+    /* max-width: 50%; */
+}
+
+.dot {
+    height: 8rem;
+    width: 8rem;
+    background-color: rgb(211, 127, 127);
+    border-radius: 50%;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* ------------- ****** STOCKS SECTION ENDS ******** -------------  */
+
+
+/* ------------- ****** STATISTICS SECTION STARTS ******** -------------  */
+
+.statistics {
+    border-radius: 120px 120px 0px 0px;
+    background-color: antiquewhite;
+}
+
+.statEle {
+    size: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 10rem;
+    width: 8rem;
+}
+
+.statIcon {
+    height: 7rem;
+    width: 7rem;
+}
+
+.statEle p {
+    font-size: 20px;
+    margin: 0;
+}
+
+
+/* ------------- ****** STATISTICS SECTION ENDS ******** -------------  */
+
+
+/* ------------- ****** FOOTER SECTION STARTS ******** -------------  */
+
 .footer {
     padding: 15px 0;
     background-color: #e5e5e5;
@@ -34,72 +146,4 @@
 .footerTitle {
     text-align: center;
     font-weight: bold;
-}
-
-.heroImg {
-    height: 25rem;
-    width: 30rem;
-}
-
-.heroTitleBox {
-    display: flex;
-    align-items: center;
-}
-
-.heroTitle {
-    text-align: center;
-    font-size: 75px;
-    font-weight: 650;
-}
-
-.heroTitle p {
-    margin: 0;
-}
-
-.newsContent {
-    text-align: center;
-}
-
-.bloodStock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
-.bloodStock p {
-    text-align: center;
-    font-weight: bold;
-    font-size: 27px;
-}
-
-.circle {
-    text-align: center;
-    max-width: 50%;
-}
-
-.dot {
-    height: 8rem;
-    width: 8rem;
-    background-color: rgb(211, 127, 127);
-    border-radius: 50%;
-    display: inline-block;
-    margin: 12px;
-}
-
-.statistics {
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-}
-
-.icon {
-    height: 5rem;
-    width: 5rem;
-}
-
-.statEle p {
-    margin: 0;
 }
