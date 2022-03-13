@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 function MainComponent() {
     return (
-        <Container fluid="md">
+        <Container fluid="md" className="mainComponent">
             <Row>
                 <Col>Banner Part</Col>
             </Row>
