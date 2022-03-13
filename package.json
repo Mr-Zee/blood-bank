@@ -36,5 +36,12 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "@iconify/icons-bx": "^1.2.3",
+        "@iconify/icons-carbon": "^1.2.2",
+        "@iconify/icons-fluent": "^1.2.3",
+        "@iconify/icons-la": "^1.2.1",
+        "@iconify/react": "^3.1.4"
     }
 }
