@@ -1,5 +1,9 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import { Icon } from '@iconify/react';
 import logo from "../Assets/img/logo.png";
+import mailIcon from '@iconify/icons-charm/mail';
+import telephoneFill from '@iconify/icons-bi/telephone-fill';
+import locationHeartFilled from '@iconify/icons-carbon/location-heart-filled';
 
 function Footer() {
     return (
@@ -18,15 +22,15 @@ function Footer() {
                         <p className='footerTitle'>Contact Info</p>
                         <p>
                             +91 1230972211
-                            <img className='footerIcon' src={logo} alt="" />
+                            <Icon className='footerIcon' icon={telephoneFill} />
                         </p>
                         <p>
                             bloodbank@gmail.com
-                            <img className='footerIcon' src={logo} alt="" />
+                            <Icon className='footerIcon' icon={mailIcon} />
                         </p>
                         <p>
-                            +91 1230972211
-                            <img className='footerIcon' src={logo} alt="" />
+                            Kasaragod General Hospital
+                            <Icon className='footerIcon' icon={locationHeartFilled} />
                         </p>
                     </Col>
                 </Row>

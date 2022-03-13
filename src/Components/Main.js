@@ -1,6 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import hero from "../Assets/img/hero.png";
-import logo from "../Assets/img/logo.png";
 import { Icon } from '@iconify/react';
 import campsiteIcon from '@iconify/icons-carbon/campsite';
 import donateBlood from '@iconify/icons-bx/donate-blood';

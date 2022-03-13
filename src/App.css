@@ -8,6 +8,11 @@
     flex: 1;
 }
 
+.mainLogo {
+    height: 3rem;
+    margin-right: 9px;
+}
+
 
 /* ------------- ****** HERO SECTION STARTS ******** -------------  */
 
@@ -90,7 +95,7 @@
 
 .statistics {
     border-radius: 120px 120px 0px 0px;
-    background-color: antiquewhite;
+    background-color: rgba(250, 195, 195, 0.774);
 }
 
 .statEle {
