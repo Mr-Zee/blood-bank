@@ -4,11 +4,11 @@ function CustomNavbar() {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
+                <Navbar.Brand href="#home">Blood Bank</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        Signed in as: <a href="#login">Mark Otto</a>
+                        Login
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>
