@@ -1,20 +1,26 @@
+import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomNavbar from "./Components/Navbar";
-// import MainComponent from "./Components/Main";
 import Footer from "./Components/Footer";
-import HeroComponent from './Components/Hero';
-import MainBody from './Components/MainBody';
-import Statistics from './Components/Statistics';
+import Landing from './Components/landing';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <CustomNavbar/>
-      <HeroComponent/>
-      <MainBody/>
-      <Statistics/>
-      <Footer/>
+      <Router>
+        <CustomNavbar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="login" element={<p>Login</p>} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }
