@@ -99,6 +99,11 @@
     transform: matrix(0.63, -0.78, 0.78);
 }
 
+.stockValue {
+    /* font-size: 20px; */
+    font-weight: 600;
+}
+
 
 /* ------------- ****** STOCKS SECTION ENDS ******** -------------  */
 
