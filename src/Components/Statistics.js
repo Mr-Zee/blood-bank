@@ -11,28 +11,28 @@ function Statistics() {
     return (
         <Container fluid="md" className="mainComponent">
             <Row className='statistics py-5 '>
-                <Col>
+                <Col xs={6} sm={6} md={3} lg={3}>
                     <div className='statEle m-auto'>
                         <Icon className='statIcon mb-3' icon={campsiteIcon} />
                         <p>50+</p>
                         <p>Camps</p>
                     </div>
                 </Col>
-                <Col >
+                <Col xs={6} sm={6} md={3} lg={3} >
                     <div className='statEle m-auto'>
                         <Icon className='statIcon mb-3' icon={peopleAdd16Regular} />
                         <p>1000+</p>
                         <p>Registered</p>
                     </div>
                 </Col>
-                <Col >
+                <Col xs={6} sm={6} md={3} lg={3} >
                     <div className='statEle m-auto'>
                         <Icon className='statIcon mb-3' icon={donateBlood} />
                         <p>500+</p>
                         <p>Donors</p>
                     </div>
                 </Col>
-                <Col >
+                <Col xs={6} sm={6} md={3} lg={3} >
                     <div className='statEle m-auto'>
                         <Icon className='statIcon mb-3' icon={handsHelping} />
                         <p>20+</p>

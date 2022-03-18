@@ -10,7 +10,7 @@ function Footer() {
         <div className='footer'>
             <Container>
                 <Row>
-                    <Col>
+                    <Col xs={12} md={6}>
                         <p className='footerTitle'>Our Partners</p>
                         <div className='partnerLogos'>
                             <img className='partnerLogo' src={logo} alt="logo" />
@@ -18,7 +18,7 @@ function Footer() {
                             <img className='partnerLogo' src={logo} alt="logo" />
                         </div>
                     </Col>
-                    <Col className='contactCol'>
+                    <Col xs={12} md={6} className='contactCol'>
                         <p className='footerTitle'>Contact Info</p>
                         <p>
                             +91 1230972211
