@@ -6,6 +6,9 @@ import telephoneFill from '@iconify/icons-bi/telephone-fill';
 import locationHeartFilled from '@iconify/icons-carbon/location-heart-filled';
 
 function Footer() {
+    const logos = [
+        logo, logo, logo,
+    ]
     return (
         <div className='footer'>
             <Container>
@@ -13,9 +16,13 @@ function Footer() {
                     <Col xs={12} md={6}>
                         <p className='footerTitle'>Our Partners</p>
                         <div className='partnerLogos'>
-                            <img className='partnerLogo' src={logo} alt="logo" />
-                            <img className='partnerLogo' src={logo} alt="logo" />
-                            <img className='partnerLogo' src={logo} alt="logo" />
+                            {
+                                logos.map((logo) => {
+                                    return (
+                                        <img className='partnerLogo' src={logo} alt="logo" />
+                                    )
+                                })
+                            }
                         </div>
                     </Col>
                     <Col xs={12} md={6} className='contactCol'>

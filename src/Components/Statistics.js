@@ -8,37 +8,44 @@ import peopleAdd16Regular from '@iconify/icons-fluent/people-add-16-regular';
 
 
 function Statistics() {
+    const statsData = [
+        {
+            icon: campsiteIcon,
+            count: 50,
+            text: 'Camps'
+        },
+        {
+            icon: peopleAdd16Regular,
+            count: 1000,
+            text: 'Registered'
+        },
+        {
+            icon: donateBlood,
+            count: 500,
+            text: 'Donor'
+        },
+        {
+            icon: handsHelping,
+            count: 20,
+            text: 'Volunteers'
+        },
+    ]
     return (
         <Container fluid="md" className="mainComponent">
             <Row className='statistics py-5 '>
-                <Col xs={6} sm={6} md={3} lg={3}>
-                    <div className='statEle m-auto'>
-                        <Icon className='statIcon mb-3' icon={campsiteIcon} />
-                        <p>50+</p>
-                        <p>Camps</p>
-                    </div>
-                </Col>
-                <Col xs={6} sm={6} md={3} lg={3} >
-                    <div className='statEle m-auto'>
-                        <Icon className='statIcon mb-3' icon={peopleAdd16Regular} />
-                        <p>1000+</p>
-                        <p>Registered</p>
-                    </div>
-                </Col>
-                <Col xs={6} sm={6} md={3} lg={3} >
-                    <div className='statEle m-auto'>
-                        <Icon className='statIcon mb-3' icon={donateBlood} />
-                        <p>500+</p>
-                        <p>Donors</p>
-                    </div>
-                </Col>
-                <Col xs={6} sm={6} md={3} lg={3} >
-                    <div className='statEle m-auto'>
-                        <Icon className='statIcon mb-3' icon={handsHelping} />
-                        <p>20+</p>
-                        <p>Volunteers</p>
-                    </div>
-                </Col>
+                {
+                    statsData.map(item => {
+                        return (
+                            <Col xs={6} sm={6} md={3} lg={3}>
+                                <div className='statEle m-auto'>
+                                    <Icon className='statIcon mb-3' icon={item.icon} />
+                                    <p>{item.count}+</p>
+                                    <p>{item.text}</p>
+                                </div>
+                            </Col>
+                        )
+                    })
+                }
             </Row>
         </Container>
     );
