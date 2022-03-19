@@ -25,8 +25,6 @@ function Registration() {
                             </div>
                         </div>
                         <div class="form-group row mb-3">
-                        </div>
-                        <div class="form-group row mb-3">
                             <div class="col-sm-6">
                                 <input type="text" class="form-control" id="inputEmail3" placeholder="Blood Group" />
                             </div>
