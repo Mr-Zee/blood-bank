@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomNavbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Landing from './Components/landing';
+import Dash from './Components/login/Dashboard';
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="login" element={<Login />} />
+          <Route path="dashboard" element={<Dash />} />
         </Routes>
         <Footer />
       </Router>
