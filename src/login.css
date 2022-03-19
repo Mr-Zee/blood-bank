@@ -26,8 +26,8 @@
 }
 
 .profileImage {
-    height: 8rem;
-    width: 8rem;
+    height: 5rem;
+    width: 5rem;
     margin: 22px;
 }
 
@@ -40,4 +40,14 @@
 
 .formContainer {
     width: 50rem;
+}
+
+.RegContainer input {
+    border: 2px solid #B10000;
+    box-sizing: border-box;
+    border-radius: 60px 0px;
+}
+
+.saveBtn {
+    margin-left: auto;
 }
