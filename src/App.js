@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import './login.css';
+import Login from './Components/login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomNavbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
@@ -17,7 +19,7 @@ function App() {
         <CustomNavbar />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="login" element={<p>Login</p>} />
+          <Route path="login" element={<Login />} />
         </Routes>
         <Footer />
       </Router>
