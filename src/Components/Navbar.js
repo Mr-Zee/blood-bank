@@ -1,9 +1,12 @@
 import { Navbar, Container } from 'react-bootstrap';
 import logo from "../Assets/img/logo.png";
 import { Link } from "react-router-dom";
+import { useUserContext } from "../Components/context/userContext"
 
 function CustomNavbar() {
-    let isLoggedIn = false;
+    let isLoggedIn = true;
+    const { user } = useUserContext();
+    console.log(user);
     return (
         <Navbar className="CustomNavbar" bg="light" expand="lg">
             <Container>
@@ -30,7 +33,7 @@ function CustomNavbar() {
                     <Navbar.Text>
                         {
                             isLoggedIn ? <>
-                                <Link to="/login">Logout</Link>
+                                <Link to="/login">Logout {user}</Link>
                             </> : <>
                                 <Link to="/login">Login</Link>
                             </>

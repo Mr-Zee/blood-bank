@@ -1,9 +1,11 @@
 import { Col, Row, Form, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import mainbg from "../../Assets/img/hero.png";
+import { useUserContext } from "../context/userContext"
 
 
 function Login() {
+  // const { logIn } = useUserContext();
   return (
     <Container className="signInContainer">
       <Row>
@@ -14,7 +16,7 @@ function Login() {
           <Form >
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control type="email" placeholder="Enter email" name="username" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
