@@ -1,31 +1,31 @@
 import { createContext, useContext, useState } from "react";
 
 export const userContext = createContext({
-    user: null,
-    logIn: () => { },
-    logout: () => { },
-})
+  user: null,
+  userlogIn: () => {},
+  logOut: () => {},
+});
 
-const USER = { name: "Guest", isGuestUser: true };
+// const USER = { name: "Guest", isGuestUser: true };
 
 export function UserContextProvider({ children }) {
-    const [user, setUser] = useState(USER);
-    function logIn(username){
-        setUser({ isGuestUser:false, name: username });
-    }
-    function logOut(){
-        setUser(USER);
-    }
-
-    return (
-        <userContext.Provider value={{ user, logIn, logOut }}>
-            {children}
-        </userContext.Provider>
-    )
+//   const [setUser] = useState(USER);
+  function userlogIn() {
+      console.log("abc");
+    // setUser({ isGuestUser: false, name: username });
+  }
+  function logOut() {
+    // setUser(USER);
+  }
+  return (
+    <userContext.Provider value={{ userlogIn, logOut }}>
+      {children}
+    </userContext.Provider>
+  );
 }
 
 export function useUserContext() {
-    const { user, logIn, logout } = useContext(userContext);
+  const { user, userlogIn, logOut } = useContext(userContext);
 
-    return (user, logIn, logout);
+  return { user, userlogIn, logOut };
 }

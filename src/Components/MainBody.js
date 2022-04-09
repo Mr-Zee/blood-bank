@@ -41,9 +41,9 @@ function MainBody() {
         <Col className="bloodStock">
           <p>Blood Stocks</p>
           <Row className="circle justify-content-center">
-            {stockData.map((element) => {
+            {stockData.map((element, index) => {
               return (
-                <Col
+                <Col key={index}
                   xs={6}
                   sm={6}
                   md={4}

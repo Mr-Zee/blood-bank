@@ -17,9 +17,9 @@ function Footer() {
                         <p className='footerTitle'>Our Partners</p>
                         <div className='partnerLogos'>
                             {
-                                logos.map((logo) => {
+                                logos.map((logo, index) => {
                                     return (
-                                        <img className='partnerLogo' src={logo} alt="logo" />
+                                        <img className='partnerLogo' src={logo} alt="logo" key={index}/>
                                     )
                                 })
                             }
