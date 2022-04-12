@@ -6,14 +6,14 @@ import telephoneFill from '@iconify/icons-bi/telephone-fill';
 import locationHeartFilled from '@iconify/icons-carbon/location-heart-filled';
 
 function Footer() {
-    let isLoggedIn = false;
+    let isLoggedIn = true;
     const logos = [
         logo, logo, logo,
     ]
     return (
         <div className='footer' >
             {
-                isLoggedIn ? <>
+                isLoggedIn ? null : <>
                     <Container>
                         <Row>
                             <Col xs={12} md={6}>
@@ -52,7 +52,7 @@ function Footer() {
 
                     </Container>
                 </>
-                    : null
+
             }
         </div >
     );
