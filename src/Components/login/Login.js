@@ -1,7 +1,7 @@
 import { Col, Row, Form, Button, Container } from "react-bootstrap";
 import mainbg from "../../Assets/img/hero.png";
 import { useUserContext } from "../context/userContext"
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 
 function Login() {
@@ -17,10 +17,12 @@ function Login() {
     if (userName === 'Ziad' && password === '123') {
       // Login Success 
       console.log("success");
-      userLogIn();
+      console.log(userName, password);
+      // userLogIn();
     }
     else {
       // Login Failed
+      alert("Login Failed ! . Check Username and Password.")
       console.log("Failed");
     }
   }

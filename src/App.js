@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <Router>
         <userContext.Provider value={{ userLogIn }}>
-        <CustomNavbar />
+          <CustomNavbar />
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="login" element={<Login />} />
@@ -33,8 +33,8 @@ function App() {
             <Route path="registration" element={<Registration />} />
             <Route path="profile/:id" element={<ProfView />} />
           </Routes>
+          <Footer />
         </userContext.Provider>
-        <Footer />
       </Router>
     </div>
   );
