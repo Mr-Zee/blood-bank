@@ -1,31 +1,32 @@
-import { createContext, useContext, useState } from "react";
+import React, { useState, createContext, useEffect } from "react";
 
-export const userContext = createContext({
-  user: null,
-  userlogIn: () => {},
-  logOut: () => {},
-});
+export const UserContext = createContext({})
 
-// const USER = { name: "Guest", isGuestUser: true };
+export const UserProvider = props => {
+  const [user, setUser] = useState({ userName: "", password: "" })
 
-export function UserContextProvider({ children }) {
-//   const [setUser] = useState(USER);
-  function userlogIn() {
-      console.log("abc");
-    // setUser({ isGuestUser: false, name: username });
-  }
-  function logOut() {
-    // setUser(USER);
-  }
+  const [isLoggedIn, setIsLoggedIn ] = useState( false )
+
+  useEffect(() => {
+    if (user.userName !== "" && user.password !== "") {
+      console.log("authenticating user API");
+      let apiResponse = (user.userName === "ziad" && user.password === "123");
+      console.log(apiResponse);
+      if (apiResponse === true) {
+        console.log("Login success");
+        setIsLoggedIn(true);
+      }
+      else {
+        console.log("Login failed");
+        setIsLoggedIn(false);
+      }
+    }
+  }, [user,isLoggedIn])
+
+
   return (
-    <userContext.Provider value={{ userlogIn, logOut }}>
-      {children}
-    </userContext.Provider>
-  );
-}
-
-export function useUserContext() {
-  const { user, userlogIn, logOut } = useContext(userContext);
-
-  return { user, userlogIn, logOut };
+    <UserContext.Provider value={[user, setUser]}>
+      {props.children}
+    </UserContext.Provider>
+  )
 }

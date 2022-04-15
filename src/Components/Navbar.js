@@ -1,11 +1,9 @@
 import { Navbar, Container } from 'react-bootstrap';
 import logo from "../Assets/img/logo.png";
 import { Link } from "react-router-dom";
-import { useUserContext } from "../Components/context/userContext"
 
 function CustomNavbar() {
     let isLoggedIn = true;
-    const { user } = useUserContext();
     // console.log(user);
     return (
         <Navbar className="CustomNavbar" bg="light" expand="lg">

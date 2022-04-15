@@ -1,11 +1,11 @@
 import { Col, Row, Form, Button, Container } from "react-bootstrap";
 import mainbg from "../../Assets/img/hero.png";
-import { useUserContext } from "../context/userContext"
-import { useState } from "react";
+import { UserContext } from "../context/userContext"
+import { useState, useContext } from "react";
 
 
 function Login() {
-  const { userLogIn } = useUserContext();
+  const [, setUser] = useContext(UserContext);
 
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -13,17 +13,17 @@ function Login() {
   const submitLogIn = (event) => {
     event.preventDefault();
 
-    // login Api should be called here
-    if (userName === 'Ziad' && password === '123') {
-      // Login Success 
-      console.log("success");
-      console.log(userName, password);
-      // userLogIn();
+    // form Validation
+    if (userName !== "" && password !== '') {
+      console.log(userName,password);
+      // validation Success 
+      setUser({
+        userName: userName,
+        password: password
+      })
     }
     else {
-      // Login Failed
-      alert("Login Failed ! . Check Username and Password.")
-      console.log("Failed");
+      // Validation Failed
     }
   }
 

@@ -9,7 +9,7 @@ import Dash from './Components/login/Dashboard';
 import Profiles from './Components/login/Profiles';
 import Registration from './Components/login/RegForm';
 import ProfView from './Components/login/ProfView';
-import { userContext, useUserContext } from './Components/context/userContext';
+import { UserProvider } from './Components/context/userContext';
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,12 +17,10 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const { userLogIn } = useUserContext();
-
   return (
     <div className="App">
       <Router>
-        <userContext.Provider value={{ userLogIn }}>
+        <UserProvider>
           <CustomNavbar />
           <Routes>
             <Route path="/" element={<Landing />} />
@@ -32,7 +30,7 @@ function App() {
             <Route path="registration" element={<Registration />} />
             <Route path="profile/:id" element={<ProfView />} />
           </Routes>
-        </userContext.Provider>
+        </UserProvider>
       </Router>
     </div>
   );
