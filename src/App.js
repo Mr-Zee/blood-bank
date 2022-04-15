@@ -4,7 +4,6 @@ import './login.css';
 import Login from './Components/login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomNavbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
 import Landing from './Components/landing';
 import Dash from './Components/login/Dashboard';
 import Profiles from './Components/login/Profiles';
@@ -33,7 +32,6 @@ function App() {
             <Route path="registration" element={<Registration />} />
             <Route path="profile/:id" element={<ProfView />} />
           </Routes>
-          <Footer />
         </userContext.Provider>
       </Router>
     </div>
