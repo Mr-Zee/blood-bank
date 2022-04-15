@@ -12,7 +12,6 @@ function Login() {
 
   const submitLogIn = (event) => {
     event.preventDefault();
-
     // form Validation
     if (userName !== "" && password !== '') {
       console.log(userName,password);
