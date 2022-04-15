@@ -5,34 +5,40 @@ import Footer from "../Footer";
 function Profiles() {
     const profileData = [
         {
+            id:"1",
             name: "Daniel",
             age: "23",
             Bgroup: "A+",
             Addr: "Washington DC"
         },
         {
+            id:"2",
             name: "Daniel",
             age: "23",
             Bgroup: "A+",
             Addr: "Washington DC"
         }, {
+            id:"3",
             name: "Daniel",
             age: "23",
             Bgroup: "A+",
             Addr: "Washington DC"
         }, {
+            id:"4",
             name: "Daniel",
             age: "23",
             Bgroup: "A+",
             Addr: "Washington DC"
         },
         {
+            id:"5",
             name: "Daniel",
             age: "23",
             Bgroup: "A+",
             Addr: "Washington DC"
         },
         {
+            id:"6",
             name: "Daniel",
             age: "23",
             Bgroup: "A+",
@@ -49,7 +55,7 @@ function Profiles() {
                 {
                     profileData.map(item => {
                         return (
-                            <div className="profileCard">
+                            <div className="profileCard" key={item.id}>
                                 <Row>
                                     <Col xs={3}>
                                         <img src={logo} alt="" className="profileImage" />

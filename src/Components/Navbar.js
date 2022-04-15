@@ -2,10 +2,29 @@ import { Navbar, Container } from 'react-bootstrap';
 import logo from "../Assets/img/logo.png";
 import { Link } from "react-router-dom";
 import { UserContext } from "../Components/context/userContext"
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 function CustomNavbar() {
-    const [, ,isLoggedIn] = useContext(UserContext);
+    const [, setUser, isLoggedIn, setIsLoggedIn] = useContext(UserContext);
+
+    useEffect(() => {
+        let userDetails = JSON.parse(localStorage.getItem('user'));
+        if (userDetails && userDetails.userName && userDetails.password) {
+            setUser({
+                userName: userDetails.userName,
+                password: userDetails.password
+            })
+        }
+    }, []);
+
+    const onLogOut = (e) => {
+        e.preventDefault();
+        setUser({ userName: "", password: "" });
+        localStorage.removeItem('user');
+        setIsLoggedIn(false);
+        window.location.href = '/login';
+
+    }
 
     return (
         <Navbar className="CustomNavbar" bg="light" expand="lg">
@@ -34,7 +53,7 @@ function CustomNavbar() {
                     <Navbar.Text>
                         {
                             isLoggedIn ? <>
-                                <Link to="/login">Logout { } </Link>
+                                <button onClick={(e) => { onLogOut(e) }}>Logout</button>
                             </> : <>
                                 <Link to="/login">Login</Link>
                             </>

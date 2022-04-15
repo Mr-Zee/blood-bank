@@ -1,12 +1,13 @@
 import { Col, Row, Form, Button, Container } from "react-bootstrap";
 import mainbg from "../../Assets/img/hero.png";
 import { UserContext } from "../context/userContext"
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 
 
 function Login() {
-  const [, setUser] = useContext(UserContext);
-
+  const [, setUser, isLoggedIn] = useContext(UserContext);
+  
+  const [isLogInClicked, setIsLogInClicked] = useState(false);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,17 +15,24 @@ function Login() {
     event.preventDefault();
     // form Validation
     if (userName !== "" && password !== '') {
-      console.log(userName,password);
       // validation Success 
       setUser({
         userName: userName,
         password: password
       })
+      localStorage.setItem('user',JSON.stringify({userName: userName, password: password}))
+      setIsLogInClicked(true);
     }
     else {
       // Validation Failed
     }
   }
+
+  useEffect(() => {
+    if(!isLoggedIn && isLogInClicked){
+      window.location.href = '/';
+    }
+  },[isLoggedIn,isLogInClicked])
 
   return (
     <Container className="signInContainer">

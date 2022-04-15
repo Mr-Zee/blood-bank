@@ -9,15 +9,11 @@ export const UserProvider = props => {
 
   useEffect(() => {
     if (user.userName !== "" && user.password !== "") {
-      console.log("authenticating user API");
       let apiResponse = (user.userName === "ziad" && user.password === "123");
-      console.log(apiResponse);
       if (apiResponse === true) {
-        console.log("Login success");
         setIsLoggedIn(true);
       }
       else {
-        console.log("Login failed");
         setIsLoggedIn(false);
       }
     }
@@ -25,7 +21,7 @@ export const UserProvider = props => {
 
 
   return (
-    <UserContext.Provider value={[user, setUser, isLoggedIn ]}>
+    <UserContext.Provider value={[user, setUser, isLoggedIn, setIsLoggedIn ]}>
       {props.children}
     </UserContext.Provider>
   )
